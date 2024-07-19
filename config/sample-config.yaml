@@ -4,7 +4,7 @@ crawl_delay: 5
 max_time_per_site: 3600
 connection_timeout: 10
 max_jobs: 12
-accepted_tlds: ['es','cat']
+accepted_tlds: ['spa_Latn','cat_Latn']
 seed_urls: ['http://www.ffff.es','http://www.dddd.cat']
 prefix_filter: ['mailto:']
 output_dir: '/home/agaliano/crawl_output'
@@ -17,3 +17,4 @@ min_langs_in_site: 2
 mandatory_lang: 'ca'
 min_percent_mandatory_lang: 10
 url_blacklist: ['wordpress','blogspot','facebook','google','wikipedia','youtube','perehodi','twitter','instagram']
+custom_fasttext_langid: 'path/to/the/glotlid.bin'
