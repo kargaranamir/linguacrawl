@@ -84,10 +84,10 @@ class WebDocument(object):
                         label=self.fasttextmodel.predict(article.replace("\n"," "))
                         logging.info("Fasttext identified %s category for page %s", str(label), self.url)
                         if "__label__" in label[0][0]:
-                            self._lang = label[0][0].strip().split("_")[-1]
-                            if len(self._lang) == 3:
-                                langinfo = pycountry.languages.get(alpha_3=self._lang)
-                                self._lang = langinfo.alpha_2
+                            self._lang = label[0][0].strip().split("__")[-1]
+                            # if len(self._lang) == 3:
+                            #    langinfo = pycountry.languages.get(alpha_3=self._lang)
+                            #    self._lang = langinfo.alpha_2
                     else:
                         reliable, text_bytes, detected_languages = cld2.detect(article)
                         if not reliable:
